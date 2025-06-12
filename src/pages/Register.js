@@ -18,12 +18,12 @@ function Register()
     };
     
     return(
-        <form>
-            <input type="text" placeholder="Enter name" onChange={(e)=>setform({name:e.target.value})} /><br></br>
+        <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Enter name" onChange={(e)=>setform({...form,name:e.target.value})} /><br></br>
             <br></br>
-            <input type="email" placeholder="Enter Email" onChange={(e)=>setform({email:e.target.value})}/><br></br>
+            <input type="email" placeholder="Enter Email" onChange={(e)=>setform({...form,email:e.target.value})}/><br></br>
             <br></br>
-            <input type="password" placeholder="Enter Password" onChange={(e)=>setform({password:e.target.value})}/><br></br>
+            <input type="password" placeholder="Enter Password" onChange={(e)=>setform({...form,password:e.target.value})}/><br></br>
             <br></br>
             <button type="submit">Register</button>
         </form>        
