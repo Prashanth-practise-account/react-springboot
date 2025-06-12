@@ -16,7 +16,12 @@ function Register()
         await axios.post('http://localhost:8080/api/users/register',form);
         alert('User Register');
     };
-    
+    const handleSubmit = (e) => {
+  e.preventDefault();
+  // Your form logic here
+  console.log("Form submitted");
+};
+
     return(
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Enter name" onChange={(e)=>setform({...form,name:e.target.value})} /><br></br>
